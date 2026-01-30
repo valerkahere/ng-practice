@@ -6,10 +6,14 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `
     <h1>Hello, {{ title() }}</h1>
-
+    <h2>brugh</h2>
     <router-outlet />
   `,
-  styles: [],
+  styles: [`
+        * {
+            color: green;
+        }
+    `],
 })
 export class App {
   protected readonly title = signal('ng-practice');
