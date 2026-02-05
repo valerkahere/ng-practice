@@ -11,14 +11,10 @@ import { Home } from './home/home';
     <app-header></app-header>
     <app-home></app-home>
 
-    <h1>Hello, {{ title() }}</h1>
-    <h2>brugh</h2>
     <router-outlet />
   `,
   styles: [`
-        * {
-            color: #0A0A0A;
-        }
+
     `],
 })
 export class App {

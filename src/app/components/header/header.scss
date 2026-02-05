@@ -1,0 +1,16 @@
+// @use "/src/styles.scss";
+header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #222222;
+    
+    padding-inline: 1rem;
+    
+}
+
+
+header * {
+    color: #FAFAFA;
+    margin-block: 1rem;
+}
