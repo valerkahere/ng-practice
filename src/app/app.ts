@@ -17,7 +17,7 @@ import { Home } from './home/home';
   `,
   styles: [`
         * {
-            color: green;
+            color: #0A0A0A;
         }
     `],
 })
