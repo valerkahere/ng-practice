@@ -9,12 +9,17 @@ import { Home } from './home/home';
   imports: [RouterOutlet, Header, Home],
   template: `
     <app-header></app-header>
-    <app-home></app-home>
+    <main>
+        <app-home></app-home>
+    </main>
+    
 
     <router-outlet />
   `,
   styles: [`
-
+        main {
+            padding-inline: 1rem;
+        }
     `],
 })
 export class App {
