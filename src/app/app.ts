@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { Header } from './components/header/header';
-import { Home } from './components/home/home';
+import { Home } from './home/home';
 
 @Component({
   selector: 'app-root',
