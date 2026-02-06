@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './counter.scss',
 })
 export class Counter {
-
+    clickHandler() {
+        let countEl = document.getElementById("count")
+        if (countEl !== null && countEl !== undefined) {
+            countEl.innerHTML = (Number(countEl.innerHTML) + 1).toString();
+        }
+    }
 }
