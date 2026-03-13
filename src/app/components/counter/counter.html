@@ -1,5 +1,9 @@
 <p>counter works!</p>
-<button (click)="clickHandler()">
+<button type="button" (click)="clickHandler($event)">
     Click to add 1 <br>
     Current count: <span id="count">0</span>
+</button>
+
+<button id="btnReset" type="button" (click)="clickHandler($event)">
+    Reset
 </button>
