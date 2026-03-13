@@ -9,6 +9,7 @@ import { Component, signal } from '@angular/core';
 export class Counter {
 
     // use signal instead of hardcoded value
+    // signal acts like a cotainer for the value to keep track of
     counterValue = signal(55);
     
     constructor() {
@@ -30,14 +31,16 @@ export class Counter {
                     this.counterValue.set(0);
                 } // if it's decrement button, decrement by 1
                 else if (event.currentTarget === document.getElementById("btnDec")) {
-                    //countEl.innerHTML = (Number(countEl.innerHTML) - 1).toString();
                     console.log('decrementing...');
-                    this.counterValue.set(this.counterValue() - 1);
+                    this.counterValue.update(counterValue => counterValue - 1)
                 } 
                 else { // if the target is increment button, then increment
                     // countEl.innerHTML = (Number(countEl.innerHTML) + 1).toString();
+                    
+                    // this.counterValue.set(this.counterValue() + 1);
+
                     console.log("incrementing");
-                    this.counterValue.set(this.counterValue() + 1);
+                    this.counterValue.update(counterValue => counterValue + 1)
                 }
                 
             }
