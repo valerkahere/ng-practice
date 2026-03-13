@@ -1,7 +1,7 @@
 <p>counter works!</p>
 <input type="text" placeholder="type something">
 <p>
-    Current count: <span id="count">0</span>
+    Current count: {{ counterValue() }}
 </p>
 <button id="btnInc" type="button" (click)="clickHandler($event)">
     Increment by 1
