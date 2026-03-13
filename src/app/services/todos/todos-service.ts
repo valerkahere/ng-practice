@@ -1,23 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Todo } from '../../model/todo.type';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodosService {
-    todoItems: Array<Todo> = [
-        {
-            userId: 1,
-            completed: false,
-            title: "groceries",
-            id: 0
-        },
-        {
-            userId: 2,
-            completed: false,
-            title: "car wash",
-            id: 1
-        }
-    ]
-  constructor() { }
+    http = inject(HttpClient); // access to post patch get ...
+
+    getTodosFromApi() { // returns OBSERVABLE object
+        const url = `https://jsonplaceholder.typicode.com/todos`;
+        return this.http.get<Array<Todo>>(url)
+    }
 }
