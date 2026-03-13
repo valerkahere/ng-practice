@@ -4,7 +4,7 @@
 </p>
 <app-todo-item></app-todo-item>
 
-@for (item of todoService.todoItems; track $index) {
+@for (item of todoItems(); track $index) {
     <p>{{ item.title }}</p>
 }
 
